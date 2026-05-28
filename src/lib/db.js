@@ -33,7 +33,8 @@ export function initDB() {
       id TEXT PRIMARY KEY,
       member_id TEXT NOT NULL,
       sunday_date TEXT NOT NULL,
-      is_present INTEGER DEFAULT 1
+      is_present INTEGER DEFAULT 1,
+      UNIQUE(member_id, sunday_date)
     );
   `);
   
